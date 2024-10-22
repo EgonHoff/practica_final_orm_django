@@ -1,0 +1,84 @@
+>> psql -U userdjago -d postgres
+
+>> CREATE DATABASE db_final_orm;
+
+CREATE DATABASE
+
+>> \q
+
+>> psql -U userdjango -d db_final_orm
+
+>> mkvirtualenv practica_final_orm_django
+
+created virtual environment CPython3.12.4.final.0-64 in 4124ms
+  creator CPython3Windows(dest=C:\Users\Egon Hoffmann\Envs\practica_final_orm_django, clear=False, no_vcs_ignore=False, global=False)
+  seeder FromAppData(download=False, pip=bundle, via=copy, app_data_dir=C:\Users\Egon Hoffmann\AppData\Local\pypa\virtualenv)
+    added seed packages: pip==24.2
+  activators BashActivator,BatchActivator,FishActivator,NushellActivator,PowerShellActivator,PythonActivator
+
+>> workon practica_final_orm_django
+
+### INSTALANDO DEPENDENCIAS
+
+>> pip install django==5.1.1
+
+Collecting django==5.1.1
+  Using cached Django-5.1.1-py3-none-any.whl.metadata (4.2 kB)
+Collecting asgiref<4,>=3.8.1 (from django==5.1.1)
+  Using cached asgiref-3.8.1-py3-none-any.whl.metadata (9.3 kB)
+Collecting sqlparse>=0.3.1 (from django==5.1.1)
+  Using cached sqlparse-0.5.1-py3-none-any.whl.metadata (3.9 kB)
+Collecting tzdata (from django==5.1.1)
+  Using cached tzdata-2024.2-py2.py3-none-any.whl.metadata (1.4 kB)
+Using cached Django-5.1.1-py3-none-any.whl (8.2 MB)
+Using cached asgiref-3.8.1-py3-none-any.whl (23 kB)
+Using cached sqlparse-0.5.1-py3-none-any.whl (44 kB)
+Using cached tzdata-2024.2-py2.py3-none-any.whl (346 kB)
+Installing collected packages: tzdata, sqlparse, asgiref, django
+Successfully installed asgiref-3.8.1 django-5.1.1 sqlparse-0.5.1 tzdata-2024.2
+
+>> pip install django-bootstrap5==24.3
+
+Collecting django-bootstrap5==24.3
+  Using cached django_bootstrap5-24.3-py3-none-any.whl.metadata (5.6 kB)
+Requirement already satisfied: Django>=4.2 in c:\users\egon hoffmann\envs\practica_final_orm_django\lib\site-packages (from django-bootstrap5==24.3) (5.1.1)
+Requirement already satisfied: asgiref<4,>=3.8.1 in c:\users\egon hoffmann\envs\practica_final_orm_django\lib\site-packages (from Django>=4.2->django-bootstrap5==24.3) (3.8.1)
+Requirement already satisfied: sqlparse>=0.3.1 in c:\users\egon hoffmann\envs\practica_final_orm_django\lib\site-packages (from Django>=4.2->django-bootstrap5==24.3) (0.5.1)
+Requirement already satisfied: tzdata in c:\users\egon hoffmann\envs\practica_final_orm_django\lib\site-packages (from Django>=4.2->django-bootstrap5==24.3) (2024.2)
+Using cached django_bootstrap5-24.3-py3-none-any.whl (26 kB)
+Installing collected packages: django-bootstrap5
+Successfully installed django-bootstrap5-24.3
+
+>> pip install django-crispy-forms==2.3
+
+Collecting django-crispy-forms==2.3
+  Using cached django_crispy_forms-2.3-py3-none-any.whl.metadata (5.1 kB)
+Requirement already satisfied: django>=4.2 in c:\users\egon hoffmann\envs\practica_final_orm_django\lib\site-packages (from django-crispy-forms==2.3) (5.1.1)
+Requirement already satisfied: asgiref<4,>=3.8.1 in c:\users\egon hoffmann\envs\practica_final_orm_django\lib\site-packages (from django>=4.2->django-crispy-forms==2.3) (3.8.1)
+Requirement already satisfied: sqlparse>=0.3.1 in c:\users\egon hoffmann\envs\practica_final_orm_django\lib\site-packages (from django>=4.2->django-crispy-forms==2.3) (0.5.1)
+Requirement already satisfied: tzdata in c:\users\egon hoffmann\envs\practica_final_orm_django\lib\site-packages (from django>=4.2->django-crispy-forms==2.3) (2024.2)
+Using cached django_crispy_forms-2.3-py3-none-any.whl (31 kB)
+Installing collected packages: django-crispy-forms
+Successfully installed django-crispy-forms-2.3
+
+>> pip install crispy-bootstrap5==2024.10
+
+Collecting crispy-bootstrap5==2024.10
+  Using cached crispy_bootstrap5-2024.10-py3-none-any.whl.metadata (4.0 kB)
+Requirement already satisfied: django>=4.2 in c:\users\egon hoffmann\envs\practica_final_orm_django\lib\site-packages (from crispy-bootstrap5==2024.10) (5.1.1)
+Requirement already satisfied: django-crispy-forms>=2.3 in c:\users\egon hoffmann\envs\practica_final_orm_django\lib\site-packages (from crispy-bootstrap5==2024.10) (2.3)
+Requirement already satisfied: asgiref<4,>=3.8.1 in c:\users\egon hoffmann\envs\practica_final_orm_django\lib\site-packages (from django>=4.2->crispy-bootstrap5==2024.10) (3.8.1)
+Requirement already satisfied: sqlparse>=0.3.1 in c:\users\egon hoffmann\envs\practica_final_orm_django\lib\site-packages (from django>=4.2->crispy-bootstrap5==2024.10) (0.5.1)
+Requirement already satisfied: tzdata in c:\users\egon hoffmann\envs\practica_final_orm_django\lib\site-packages (from django>=4.2->crispy-bootstrap5==2024.10) (2024.2)
+Using cached crispy_bootstrap5-2024.10-py3-none-any.whl (24 kB)
+Installing collected packages: crispy-bootstrap5
+Successfully installed crispy-bootstrap5-2024.10
+
+>> pip install pyscopg2
+
+Collecting psycopg2
+  Using cached psycopg2-2.9.10-cp312-cp312-win_amd64.whl.metadata (5.0 kB)
+Using cached psycopg2-2.9.10-cp312-cp312-win_amd64.whl (1.2 MB)
+Installing collected packages: psycopg2
+Successfully installed psycopg2-2.9.10
+
