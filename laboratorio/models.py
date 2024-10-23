@@ -15,12 +15,18 @@ class Laboratorio(models.Model):
     class Meta:
         db_table = 'Laboratorio'
 
+    def __str__(self):
+        return self.nombre
+
 class DirectorGeneral(models.Model):
     nombre = models.CharField(max_length=100)
     laboratorio = models.OneToOneField(Laboratorio, on_delete=models.CASCADE)
 
     class Meta:
         db_table = 'Director General'
+
+    def __str__(self):
+        return self.nombre
 
 class Producto(models.Model):
     nombre = models.CharField(max_length=100)
@@ -31,3 +37,9 @@ class Producto(models.Model):
 
     class Meta:
         db_table = 'Productos'
+
+    def f_fabricacion_y(self):
+        return self.f_fabricacion.year if self.f_fabricacion else None
+
+    def __str__(self):
+        return self.nombre
