@@ -11,6 +11,8 @@ def date_value_validator(value):
 
 class Laboratorio(models.Model):
     nombre = models.CharField(max_length=100)
+    ciudad = models.CharField(default='Desconocida',max_length=100)
+    pais = models.CharField(default='Desconocida',max_length=100)
 
     class Meta:
         db_table = 'Laboratorio'
@@ -20,6 +22,7 @@ class Laboratorio(models.Model):
 
 class DirectorGeneral(models.Model):
     nombre = models.CharField(max_length=100)
+    especialidad = models.CharField(default='Sin especialidad', max_length=100)
     laboratorio = models.OneToOneField(Laboratorio, on_delete=models.CASCADE)
 
     class Meta:

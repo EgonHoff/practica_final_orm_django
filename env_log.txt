@@ -82,3 +82,18 @@ Using cached psycopg2-2.9.10-cp312-cp312-win_amd64.whl (1.2 MB)
 Installing collected packages: psycopg2
 Successfully installed psycopg2-2.9.10
 
+>> py manage.py makemigrations --name actualizado_campos
+
+Migrations for 'laboratorio':
+  laboratorio\migrations\0002_actualizado_campos.py
+    + Add field especialidad to directorgeneral
+    + Add field ciudad to laboratorio
+    + Add field pais to laboratorio
+
+>> py manage.py migrate
+
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, laboratorio, sessions
+Running migrations:
+  Applying laboratorio.0002_actualizado_campos... OK
+

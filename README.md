@@ -147,3 +147,21 @@ Producto: Producto 3 Laboratorio: Laboratorio3
 Producto: Producto 2 Laboratorio: Laboratorio2
 ```
 
+## Modificaciones Al modelo
+
+- Se crean los nuevos campos
+
+En laboratorio
+```{python}
+ciudad = models.CharField(default='Desconocida',max_length=100)
+pais = models.CharField(default='Desconocida',max_length=100)
+```
+
+En Director General
+```{python}
+especialidad = models.CharField(default='Sin especialidad', max_length=100)
+```
+Valores por default dado que ya existen registros.
+
+- Realizamos Makemigrations
+- laboratorio\migrations\0002_actualizado_campos.py
