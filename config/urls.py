@@ -16,11 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from crud.views import inicio
+from crud.views import inicio, acerca_de
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',inicio,name='inicio'),
+    path('',inicio,name='inicio2'),
     #path('laboratorio/',include('laboratorio.urls'))
-    path('crud/',include('crud.urls'))
+    path('crud/', include('crud.urls')),
 ]

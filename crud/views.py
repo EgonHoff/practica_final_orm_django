@@ -6,6 +6,9 @@ from laboratorio.models import Laboratorio
 def inicio(request):
     return render(request, 'inicio.html')
 
+def acerca_de(request):
+    return render(request , 'acerca_de.html')
+
 def mostrar_lab(request):
     laboratorios = Laboratorio.objects.all()
     num_visitas = request.session.get('num_visitas',1)

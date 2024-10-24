@@ -97,3 +97,16 @@ Operations to perform:
 Running migrations:
   Applying laboratorio.0002_actualizado_campos... OK
 
+
+>> py manage.py test crud
+
+Found 7 test(s).
+Creating test database for alias 'default'...
+System check identified no issues (0 silenced).
+.......
+----------------------------------------------------------------------
+Ran 7 tests in 0.040s
+
+OK
+Destroying test database for alias 'default'...
+

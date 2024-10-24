@@ -165,3 +165,16 @@ Valores por default dado que ya existen registros.
 
 - Realizamos Makemigrations
 - laboratorio\migrations\0002_actualizado_campos.py
+
+## Aplicacion crud
+
+- Vistas
+- Templates
+- Pagina de inicio
+
+## Pruebas
+
+- crud\tests.py
+- Se define setUpTestData y luego se verifica que los datos son correctos
+- Se verifica que la URL /crud/mostrar/ entregue una respuesta HTTP 200
+- Se verifica con reverse el nombre la URL, que se este usando el template correcto 'mostrar.html' y que contenga "< h2 style="text-align: center">Información de Laboratorios</h 2 >"
