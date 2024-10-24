@@ -8,11 +8,13 @@ from .models import Laboratorio, DirectorGeneral, Producto
 class LaboratorioAdmin(admin.ModelAdmin):
     list_display = ('id',
                     'nombre',)
+    ordering = ('id',)
 
 class DirectorGeneralAdmin(admin.ModelAdmin):
     list_display = ('id',
                     'nombre',
                     'laboratorio',)
+    ordering = ('id',)
     
 class ProductoAdmin(admin.ModelAdmin):
     list_display = ('id',
@@ -25,6 +27,7 @@ class ProductoAdmin(admin.ModelAdmin):
 
     list_filter = ('nombre',
                    'laboratorio',)
+    ordering = ('id',)
 
 admin.site.register(Laboratorio, LaboratorioAdmin)
 admin.site.register(DirectorGeneral, DirectorGeneralAdmin)
