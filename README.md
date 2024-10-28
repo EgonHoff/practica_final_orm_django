@@ -9,6 +9,7 @@ Estado inicial del proyecto
 - Vs-code
 - GoogleChrome
 - Python 3.12.4
+- Framework Django
 
 ## Creación del Entorno virtual con VirtualEnvwrapper
 
@@ -173,6 +174,8 @@ Valores por default dado que ya existen registros.
 - Pagina de inicio
 
 ## Pruebas
+
+### Considerar dar los permisos requeridos al usuario de postgre para realizar setUpTestData
 
 - crud\tests.py
 - Se define setUpTestData y luego se verifica que los datos son correctos
